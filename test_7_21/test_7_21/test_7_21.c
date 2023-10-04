@@ -2325,7 +2325,6 @@ void menu()
 //}
 //
 
-//Github好难用啊
 
 //int cmp_int(const void* e1, const void* e2)
 //{
@@ -2447,3 +2446,21 @@ void menu()
 //	printf("%d\n", sizeof(&a));
 //	return 0;
 //}
+
+//int main()
+//{
+//	char arr[] = { 'a','b','c' };
+//	printf("%d\n", strlen(*arr));//strlen('a')=strlen(97)发生访问冲突
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+

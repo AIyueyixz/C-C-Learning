@@ -2475,10 +2475,59 @@
 //2.&数组名表示整个数组，取出的是整个数组的地址
 //3.除此之外所有的数组名都是首元素的地址
 
+//int main()
+//{
+//	int a[5] = { 1,2,3,4,5 };
+//	int* ptr = (int*)(&a + 1);
+//	printf("%d,%d", *(a + 1), *(ptr - 1));
+//	return 0;
+//}
 
+//struct Test
+//{
+//	int Num;
+//	char* pcName;
+//	short sDate;
+//	char cha[2];
+//	short sBa[4];
+//}*p = (struct Test*)0x100000;
+////已知一个结构体Test变量大小为20个字节
+//int main()
+//{
+//	printf("%p\n", p + 0x1);
+//	//0x100014
+//	printf("%p\n", (unsigned long)p + 0x1);
+//	//1,048,576+1-->0x100001
+//	printf("%p\n", (unsigned int*)p + 0x1);
+//	//0x100000+4-->0x100004
+//}
 
+//int main()
+//{
+//	int a[4] = { 1,2,3,4 };
+//	int* ptr1 = (int*)(&a + 1);
+//	int* ptr2 = (int*)((int)a + 1);
+//	printf("%x %x", ptr1[-1], *ptr2);
+//	return 0;
+//}
 
+//int main()
+//{
+//	int a[3][2] = { (0,1),(2,3),(4,5) };
+//	//逗号表达式-->a={{1,3},{5,0},{0,0}
+//	int* p;
+//	p = a[0];
+//	printf("%d", p[0]);
+//	return 0;
+//}
 
-
-
+//int main()
+//{
+//	int a[5][5];
+//	int(*p)[4];
+//	p = a;
+//	printf("%p,%d\n", &p[4][2] - &a[4][2], &p[4][2] - &a[4][2]);
+//	//指针地址相减得到的是之间的元素个数，&p[4][2] - &a[4][2]是低地址-高地址
+//	return 0;
+//}
 

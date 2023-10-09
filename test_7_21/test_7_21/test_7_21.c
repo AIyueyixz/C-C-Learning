@@ -2563,3 +2563,89 @@
 //	return 0;
 //}
 
+//模拟实现strlen函数
+//1.计数器方法
+//2.指针-指针
+//3.递归的方式
+//size_t my_strlen(const char* arr)
+//{
+//	assert(arr);
+//	size_t i = 0;
+//	while (*arr != '\0')
+//	{
+//		i++;
+//		arr++;
+//	}
+//	return i;
+//}
+//int main()
+//{
+//	char arr[] = "abcdefg";
+//	size_t len=my_strlen(arr);
+//	printf("%u\n", len);
+//	
+//	return 0;
+//
+//}
+
+//int main()
+//{
+//	char name[20] = { 0 };
+//	strcpy(name, "zhangsan");
+//	printf("%s\n", name);
+//	//name="zhangsan"//err,name是地址，地址是一个常量值，不能被赋值
+//	
+//	return 0;
+//}
+
+
+//char* my_strcpy(char*dest,const char*res)
+//{
+//	assert(dest && res);
+//	char* ret = dest;
+//	while (*dest++ = *res++)
+//		;
+//	return ret;
+//}
+//int main()
+//{
+//	char* p = "abcdef";
+//	char arr[] = "bit";
+//	strcpy(p, arr);//目标区域不可变
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr[] = "bit";
+//	char arr1[20] = { 0 };
+//	my_strcpy(arr1, arr);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+
+char* my_strcat(char*dest,const char*sor)
+{
+	assert(dest && sor);
+	char* ret = dest;
+	while (*dest != '\0')
+	{ 
+		dest++;
+	}
+	while (*dest++ = *sor++)
+	{
+		;
+	}
+	return ret;
+}
+int main()
+{
+	char arr[20] = "hello ";
+	//字符串追加
+	//能自己给自己追加吗？--不行，程序会崩溃
+	my_strcat(arr, "world");
+	printf("%s\n", arr);
+	return 0;
+
+}

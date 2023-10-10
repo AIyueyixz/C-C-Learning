@@ -2625,27 +2625,267 @@
 //	return 0;
 //}
 
-char* my_strcat(char*dest,const char*sor)
+//char* my_strcat(char*dest,const char*sor)
+//{
+//	assert(dest && sor);
+//	char* ret = dest;
+//	while (*dest != '\0')
+//	{ 
+//		dest++;
+//	}
+//	while (*dest++ = *sor++)
+//	{
+//		;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	char arr[20] = "hello ";
+//	//字符串追加
+//	//能自己给自己追加吗？--不行，程序会崩溃
+//	my_strcat(arr, "world");
+//	printf("%s\n", arr);
+//	return 0;
+//
+//}
+
+
+int my_strcmp(const char* str1, const char* str2)
 {
-	assert(dest && sor);
-	char* ret = dest;
-	while (*dest != '\0')
-	{ 
-		dest++;
-	}
-	while (*dest++ = *sor++)
+	assert(str1 && str2);
+	while (*str1 == *str2)
 	{
-		;
+		if (*str1 == '\0')
+			return 0;
+		str1++;
+		str2++;
+	}
+	return(*str1 - *str2);
+}
+//int main()
+//{
+//	/*char arr1[20] = "zhangsan";
+//	char arr2[] = "zhangsanfeng";*/
+//	char arr1[] = "abcq";
+//	char arr2[] = "abcqd";
+//	int ret = my_strcmp(arr1, arr2);
+//	if (ret < 0)
+//	{
+//		printf("<\n");
+//	}
+//	else if (ret == 0)
+//	{
+//		printf("=\n");
+//	}
+//	else
+//	{
+//		printf(">\n");
+//	}
+//	//if (arr1 == arr2)//这里比较的是两个地址
+//	//{
+//	//	printf("==\n");
+//	//}
+//	//else
+//	//{
+//	//	printf("!=\n");
+//	//}
+//	return 0;
+//}
+
+//长度不受限制的字符串函数
+//strcmp、strcpy、strcat
+
+//长度受限制的字符串函数
+//strncmp、strncpy、strncat
+
+//int main()
+//{
+//	char arr1[20]="abcdef";
+//	char arr2[] = "bit";
+//	strncpy(arr1, arr2, 5);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+
+
+
+//char*my_strncat(char* des, const char* sor, size_t n)
+//{
+//	assert(des && sor);
+//	char* ret = des;
+//	while (*des != '\0')
+//	{
+//		des++;
+//	}
+//	while (*sor != '\0' && n != 0)
+//	{
+//		*des = *sor;
+//		n--;
+//		des++;
+//		sor++;
+//	}
+//	*des = '\0';
+//	return ret;
+//}
+
+
+
+//int main()
+//{
+//	//strncat
+//	char arr1[20] = "hello\0xxxxx";
+//	char arr2[] = "bit";
+//	my_strncat(arr1, arr2, 2);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[] = "abcg";
+//	int ret = strncmp(arr1, arr2, 4);
+//	if (ret == 0)
+//		printf("==\n");
+//	else if (ret > 0)
+//		printf(">\n");
+//	else
+//		printf("<\n");
+//	return 0;
+//}
+
+//strstr子串查找
+//KMP是一种效率高的但实现难度大的一种子串查找方法
+//const char* my_strstr(const char* str1, const char* str2)
+//{
+//	assert(str1 && str2);
+//	const char* s1 = str1;
+//	const char* s2 = str2;
+//	const char* p = str1;
+//	while (*p)
+//	{
+//		s1 = p;
+//		s2 = str2;
+//		while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (*s2 == '\0')
+//			return p;
+//		p++;
+//	}
+//	return NULL;
+//}
+//
+//int main()
+//{
+//	char email[] = "zpw@bbitejiuyeke";
+//	char substr[] = "bitejiuyeke";
+//	char*ret=my_strstr(email, substr);
+//	if (ret == NULL)
+//		printf("未找到该子串\n");
+//	else
+//		printf("%s\n", ret);
+//	return 0;
+//}
+
+//strtok
+//切割字符串
+//int main()
+//{
+//	const char* sep = "@.";
+//	char email[] = "xzzsryxw@163.com";
+//	char email1[] = "xzzsryxw@163.com";
+//	char* ret = NULL;
+//	for (ret = strtok(email1, sep); ret != NULL; ret = strtok(NULL, sep))
+//	{
+//		printf("%s\n", ret);
+//	}
+//	printf("%s\n", email);
+//	/*if(ret!=NULL)
+//		printf("%s\n", ret);
+//	ret = strtok(NULL, sep);//静态变量实现传NULL
+//	if (ret != NULL)
+//		printf("%s\n", ret);
+//	ret = strtok(NULL, sep);
+//	if (ret != NULL)
+//		printf("%s\n", ret);
+//	ret = strtok(NULL, sep);
+//	if (ret != NULL)
+//		printf("%s\n", ret);*/
+//	return 0;
+
+//}
+
+//C语言的库函数在执行失败的时候会设置错误码,需要引头文件
+//# include<errno.h>
+//strerror
+//int main()
+//{
+//	/*printf("%s\n", strerror(0));
+//	printf("%s\n", strerror(1));
+//	printf("%s\n", strerror(2));
+//	printf("%s\n", strerror(3));
+//	printf("%s\n", strerror(4));*/
+//	//erro-C语言设置的一个存放错误码的全局变量
+//
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 1;
+//	}
+//	else
+//	{
+//
+//	}
+//	return 0;
+//}
+//#include<ctype.h>
+//字符分类函数
+//int main()
+//{
+//	//int a = isspace(' ');
+//	//printf("%d\n", a);
+//
+//	/*int a = isdigit('x');
+//	printf("%d\n", a);*/
+//
+//	printf("%c\n", tolower('W'));
+//	printf("%c\n", toupper('w'));
+//
+//	return 0;
+//}
+
+//memcpy-负责拷贝两块独立空间中的数据
+//重叠内存的拷贝，是怎么做的呢？--memmove
+//
+void* my_memcpy(void* dest, const void* src, size_t num)
+{
+	assert(dest && src);
+	void* ret = dest;
+	while (num--)
+	{
+		*(char*)dest = *(char*)src;
+		dest = (char*)dest + 1;
+		src = (char*)src + 1;
 	}
 	return ret;
 }
 int main()
 {
-	char arr[20] = "hello ";
-	//字符串追加
-	//能自己给自己追加吗？--不行，程序会崩溃
-	my_strcat(arr, "world");
-	printf("%s\n", arr);
+	int arr1[]={1,2,3,4,5,6,7,8,9,10};
+	//int arr1[] = { 1,2,3,4,5,6,7 };
+	//int arr2[10] = { 0 };
+	//my_memcpy(arr2, arr1, 28);
+	my_memcpy(arr1 + 2, arr1, 20);
+
+	/*float arr3[5] = { 1.0,2.9,4.1,4.5,5.6 };
+	float arr4[10] = { 0.0 };
+	memcpy(arr4, arr3, 20);*/
 	return 0;
 
 }
+

@@ -2862,30 +2862,68 @@ int my_strcmp(const char* str1, const char* str2)
 //memcpy-负责拷贝两块独立空间中的数据
 //重叠内存的拷贝，是怎么做的呢？--memmove
 //
-void* my_memcpy(void* dest, const void* src, size_t num)
-{
-	assert(dest && src);
-	void* ret = dest;
-	while (num--)
-	{
-		*(char*)dest = *(char*)src;
-		dest = (char*)dest + 1;
-		src = (char*)src + 1;
-	}
-	return ret;
-}
-int main()
-{
-	int arr1[]={1,2,3,4,5,6,7,8,9,10};
-	//int arr1[] = { 1,2,3,4,5,6,7 };
-	//int arr2[10] = { 0 };
-	//my_memcpy(arr2, arr1, 28);
-	my_memcpy(arr1 + 2, arr1, 20);
+//void* my_memcpy(void* dest, const void* src, size_t num)
+//{
+//	assert(dest && src);
+//	void* ret = dest;
+//	while (num--)
+//	{
+//		*(char*)dest = *(char*)src;
+//		dest = (char*)dest + 1;
+//		src = (char*)src + 1;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	int arr1[]={1,2,3,4,5,6,7,8,9,10};
+//	//int arr1[] = { 1,2,3,4,5,6,7 };
+//	//int arr2[10] = { 0 };
+//	//my_memcpy(arr2, arr1, 28);
+//	my_memcpy(arr1 + 2, arr1, 20);//自己给自己拷贝会出错
+//
+//	/*float arr3[5] = { 1.0,2.9,4.1,4.5,5.6 };
+//	float arr4[10] = { 0.0 };
+//	memcpy(arr4, arr3, 20);*/
+//	return 0;
+//
+//}
 
-	/*float arr3[5] = { 1.0,2.9,4.1,4.5,5.6 };
-	float arr4[10] = { 0.0 };
-	memcpy(arr4, arr3, 20);*/
-	return 0;
 
-}
-
+//void* my_memmove(void* des, const void* src, size_t num)
+//{
+//	assert(des && src);
+//	void* ret = des;
+//	if (des < src)//从前向后拷贝
+//	{
+//		while (num--)
+//		{
+//			*(char*)des = *(char*)src;
+//			des=(char*)des+1;
+//			src=(char*)src+1;
+//		}
+//	}
+//	else
+//	{
+//		while (num--)
+//		{
+//			*((char*)des + num) = *((char*)src + num);
+//		}
+//	}
+//	return ret;
+//}
+//void test1()
+//{
+//	int arr1[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	my_memmove(arr1 , arr1+2, 20);
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//}
+//int main()
+//{
+//	test1();
+//	return 0;
+//}

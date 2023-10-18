@@ -2927,3 +2927,28 @@ int my_strcmp(const char* str1, const char* str2)
 //	test1();
 //	return 0;
 //}
+
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 1,3,2 };
+//	int ret = memcmp(arr1, arr2, 12);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//int main()
+//{
+//	//char arr[] = "hello bit";
+//	//memset(arr, 'x', 5);
+//	//memset(arr + 6, 'x', 3);
+//	//printf("%s\n", arr);
+//	int arr[10] = { 0 };
+//	memset(arr, 1, 40);
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d\n", arr[i]);//以字节为单位处理，所以不能实现全1
+//	}
+//	return 0;
+//}

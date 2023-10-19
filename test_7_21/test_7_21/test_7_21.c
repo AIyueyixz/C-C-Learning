@@ -2952,3 +2952,45 @@ int my_strcmp(const char* str1, const char* str2)
 //	}
 //	return 0;
 //}
+// 小乐乐改数字如果某个数字的某一位数为奇数则改为0，偶数则改为1，输出改后的数字
+int TranNum(int num)
+{
+	/*1.取出每一位，用一个变量来存
+	2.判断奇数还是偶数
+	3.修改对应位，找一个数来存储暂时的结果*/
+
+	int ret = 0;
+	int flag = 0;
+	while (1)
+	{
+		int bit = num % 10;
+		
+		if (bit % 2 == 0)
+		{
+			ret += 0 * pow(10, flag);
+			num /= 10;
+			if (num == 0)
+			{
+				break;
+			}
+			flag++;
+		}
+		else
+		{
+			ret += 1 * pow(10, flag);
+			num /= 10;
+			if (num == 0)
+			{
+				break;
+			}
+			flag++;
+		}
+	}
+	return ret;
+}
+int main()
+{
+	int ret = TranNum(222222);
+	printf("%d", ret);
+	return 0;
+}

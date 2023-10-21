@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="killerInfer.c" />
+    <ClCompile Include="athleRanking.c" />
+    <ClCompile Include="onliShopp.c" />
     <ClCompile Include="test_7_21.c" />
+    <ClCompile Include="yangHuiTrian.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

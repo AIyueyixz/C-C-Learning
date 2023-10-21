@@ -18,5 +18,17 @@
     <ClCompile Include="test_7_21.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="onliShopp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="killerInfer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="athleRanking.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangHuiTrian.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,12 +1,12 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-#pragma warning(disable:6031)
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
-#include <math.h>
-#include <Windows.h>
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#pragma warning(disable:6031)
+//
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//#include <assert.h>
+//#include <math.h>
+//#include <Windows.h>
 
 //int main()
 //{
@@ -2651,18 +2651,18 @@
 //}
 
 
-int my_strcmp(const char* str1, const char* str2)
-{
-	assert(str1 && str2);
-	while (*str1 == *str2)
-	{
-		if (*str1 == '\0')
-			return 0;
-		str1++;
-		str2++;
-	}
-	return(*str1 - *str2);
-}
+//int my_strcmp(const char* str1, const char* str2)
+//{
+//	assert(str1 && str2);
+//	while (*str1 == *str2)
+//	{
+//		if (*str1 == '\0')
+//			return 0;
+//		str1++;
+//		str2++;
+//	}
+//	return(*str1 - *str2);
+//}
 //int main()
 //{
 //	/*char arr1[20] = "zhangsan";
@@ -2953,44 +2953,86 @@ int my_strcmp(const char* str1, const char* str2)
 //	return 0;
 //}
 // 小乐乐改数字如果某个数字的某一位数为奇数则改为0，偶数则改为1，输出改后的数字
-int TranNum(int num)
-{
-	/*1.取出每一位，用一个变量来存
-	2.判断奇数还是偶数
-	3.修改对应位，找一个数来存储暂时的结果*/
+//int TranNum(int num)
+//{
+//	/*1.取出每一位，用一个变量来存
+//	2.判断奇数还是偶数
+//	3.修改对应位，找一个数来存储暂时的结果*/
+//
+//	int ret = 0;
+//	int flag = 0;
+//	while (num)
+//	{
+//		int bit = num % 10;
+//		
+//		if (bit % 2 == 0)
+//		{
+//			bit = 0;
+//		}
+//		else
+//		{
+//			bit = 1;
+//		}
+//		ret += bit * pow(10, flag++);
+//		num /= 10;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	int ret = TranNum(123);
+//	printf("%d", ret);
+//	return 0;
+//}
 
-	int ret = 0;
-	int flag = 0;
-	while (1)
-	{
-		int bit = num % 10;
-		
-		if (bit % 2 == 0)
-		{
-			ret += 0 * pow(10, flag);
-			num /= 10;
-			if (num == 0)
-			{
-				break;
-			}
-			flag++;
-		}
-		else
-		{
-			ret += 1 * pow(10, flag);
-			num /= 10;
-			if (num == 0)
-			{
-				break;
-			}
-			flag++;
-		}
-	}
-	return ret;
-}
-int main()
-{
-	int ret = TranNum(222222);
-	printf("%d", ret);
-	return 0;
-}
+//void printrian0(int num)
+//{
+//	//1.用num当作循环变量
+//	//2.用一个变量循环打印每一行
+//	//3.每一行的打印分为两种：先打印空格再打印*+空格最后打印一个空格
+//	int septal = 2 * num - 1;
+//	int i = 0;
+//	for (i = 0; i < num; i++)
+//	{
+//		//每行打印的空格数
+//		int j = septal - (2 * i + 1);
+//		int k = 0;
+//		//1.打印一行之空格
+//		for (; j > 0; j--)
+//		{
+//			printf(" ");
+//		}
+//		//2.打印*+空格
+//		for (k = 0; k < i; k++)
+//		{
+//			printf("* ");
+//		}
+//		printf("*\n");
+//	}
+//}
+//void printrian1(int num)
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < num; i++)
+//	{
+//		for (j = 0; j < num; j++)
+//		{
+//			if (i + j < num - 1)
+//			{
+//				printf("  ");
+//			}
+//			else
+//			{
+//				printf("* ");
+//			}
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	printrian1(5);
+//	return 0;
+//}
+

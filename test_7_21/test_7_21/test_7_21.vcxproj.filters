@@ -30,5 +30,20 @@
     <ClCompile Include="yangHuiTrian.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="strLeftRota.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangTableau.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="is_left_move.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="matr_tran.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpTriaMatrJudge.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
